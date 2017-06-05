@@ -15,6 +15,8 @@ class TagSerializer(serializers.ModelSerializer):
 
 
 class TaskSerializer(serializers.ModelSerializer):
+    tags = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = Task
         fields = (
@@ -29,4 +31,4 @@ class TasklistSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tasklist
-        fields = ('name','owner', 'tasks')
+        fields = ('name', 'owner', 'tasks')

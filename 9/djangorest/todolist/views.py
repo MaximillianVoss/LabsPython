@@ -6,22 +6,29 @@ from .serializers import TaskSerializer, TasklistSerializer, TagSerializer, User
 from .models import Task, Tasklist, Tag, User
 
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserCreateView(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def get_queryset(self):
+        queryset = Tasklist.objects.all()
+        list_id = self.kwargs.get('list_id', None)
+        if list_id is not None:
+            queryset = queryset.filter(tasklist_id=list_id)
+        return queryset
+
+
+class UserDetailsView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
 
-class UserTypeViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-
-class TagViewSet(viewsets.ModelViewSet):
+class TagCreateView(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
 
 
-class TagTypeViewSet(viewsets.ModelViewSet):
+class TagDetailsView(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
 
@@ -29,6 +36,21 @@ class TagTypeViewSet(viewsets.ModelViewSet):
 class TasklistCreateView(generics.ListCreateAPIView):
     queryset = Tasklist.objects.all()
     serializer_class = TasklistSerializer
+
+    def get_queryset(self):
+        queryset = Tasklist.objects.all()
+        list_id = self.kwargs.get('list_id', None)
+        if list_id is not None:
+            queryset = queryset.filter(tasklist_id=list_id)
+        return queryset
+
+    def perform_create(self, serializer):
+        list_id = self.kwargs.get('list_id', None)
+        try:
+            tasklist = Tasklist.objects.get(pk=list_id)
+        except Tasklist.DoesNotExist:
+            raise NotFound()
+        serializer.save(tasklist=tasklist)
 
 
 class TasklistDetailsView(generics.RetrieveUpdateDestroyAPIView):
@@ -41,6 +63,7 @@ class TaskCreateView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         queryset = Task.objects.all()
+
         list_id = self.kwargs.get('list_id', None)
         if list_id is not None:
             queryset = queryset.filter(tasklist_id=list_id)
