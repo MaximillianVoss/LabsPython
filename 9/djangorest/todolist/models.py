@@ -1,6 +1,13 @@
 from django.db import models
 
 
+class Tag(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return "{}".format(self.name)
+
+
 class User(models.Model):
     name = models.CharField(max_length=200)
     lname = models.CharField(max_length=200)
@@ -9,17 +16,15 @@ class User(models.Model):
         return "{}".format(self.name)
 
 
+class Task(object):
+    def __init__(self, **kwargs):
+        for field in ('id', 'name', 'owner', 'status'):
+            setattr(self, field, kwargs.get(field, None))
+
+
 class Tasklist(models.Model):
     name = models.CharField(max_length=200)
-    owner = models.ForeignKey(User,related_name='user', on_delete=models.CASCADE)
-    #owner = models.ManyToManyField(User)
-
-    def __str__(self):
-        return "{}".format(self.name)
-
-
-class Tag(models.Model):
-    name = models.CharField(max_length=200)
+    owner = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE)
 
     def __str__(self):
         return "{}".format(self.name)
@@ -33,7 +38,7 @@ class Task(models.Model):
     due_date = models.DateField(null=True, blank=True)
     date_modified = models.DateField(auto_now=True)
     tasklist = models.ForeignKey(Tasklist, related_name='tasks', on_delete=models.CASCADE)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, related_name='tags')
 
     PRIORITY = (
         ('h', 'High'),
