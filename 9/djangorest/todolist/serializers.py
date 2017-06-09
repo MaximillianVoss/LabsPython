@@ -22,7 +22,7 @@ class TaskSerializer(serializers.Serializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('name', 'lname')
+        fields = ('name', 'lname', 'password')
         ordering = 'name'
 
 
