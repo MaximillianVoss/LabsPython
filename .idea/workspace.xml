@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36409cb1-6832-42ca-bb28-c094d9457dcd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/db.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/djangorest/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/djangorest/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/djangorest/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/djangorest/wsgi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/manage.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/0002_auto_20170604_2120.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/0003_auto_20170606_0301.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/0004_auto_20170606_0303.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/0005_auto_20170606_0331.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/0006_auto_20170606_0423.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/0007_user_password.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/serializers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/templates/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/10/djangorest/todolist/views.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Labs.iml" afterPath="$PROJECT_DIR$/.idea/Labs.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/9/djangorest/todolist/urls.py" afterPath="$PROJECT_DIR$/9/djangorest/todolist/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyProject/MyVirtual/pip-selfcheck.json" afterPath="$PROJECT_DIR$/MyProject/MyVirtual/pip-selfcheck.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -439,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497052006123</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Init">
+      <created>1497715910407</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1497715910407</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
